@@ -1,143 +1,69 @@
-# ER Diagram Workshop – Submission Template
-
-## Objective
-To understand and apply ER modeling concepts by creating ER diagrams for real-world applications.
-
-## Purpose
-Gain hands-on experience in designing ER diagrams that represent database structure including entities, relationships, attributes, and constraints.
+# Experiment 1: Entity-Relationship (ER) Diagram
+# NAME :GOPIKRISHNAN M
+# REGISTER NO: 212223043001
+- Billing and payment details for each appointment.
 
 ---
 
-# Scenario A: City Fitness Club Management
+## 📝 Tasks:
+1. Identify entities, relationships, and attributes.
+2. Draw the ER diagram using any tool (draw.io, dbdiagram.io, hand-drawn and scanned).
+3. Include:
+   - Cardinality & participation constraints
+   - Prerequisites for University OR Billing for Hospital
+4. Explain:
+   - Why you chose the entities and relationships.
+   - How you modeled prerequisites or billing.
 
-**Business Context:**  
-FlexiFit Gym wants a database to manage its members, trainers, and fitness programs.
+# ER Diagram Submission - Student Name
 
-**Requirements:**  
-- Members register with name, membership type, and start date.  
-- Each member can join multiple programs (Yoga, Zumba, Weight Training).  
-- Trainers assigned to programs; a program may have multiple trainers.  
-- Members may book personal training sessions with trainers.  
-- Attendance recorded for each session.  
-- Payments tracked for memberships and sessions.
+## Scenario Chosen:
+University 
 
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+## ER Diagram:
 
-### Entities and Attributes
+![er diagram university](https://github.com/user-attachments/assets/571fb603-3cac-4921-a335-f04756f16b2c)
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
 
-### Relationships and Constraints
+## Entities and Attributes:
+- University -
+  Reg. No,Address,Student,DOB
+- Mail ID -
+  Course,Mobile No,Faculty
+- Course -
+  Course Code,Credits,Prerequisite,Students Enrolled,Course Name
+- Instructors -
+  Name,Course Taken,Address,Experience
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
 
-### Assumptions
-- 
-- 
-- 
+## Relationships and Constraints:
+- University–Student Relationship
+Cardinality: One-to-Many (A university can have many students, but each student belongs to one university.)
+Participation: Total (Every student must be associated with a university.)
 
----
+- Student–Course Relationship
+Cardinality: Many-to-Many (A student can enroll in multiple courses, and a course can have multiple students.)
+Participation: Partial (A student may or may not enroll in a course.)
 
-# Scenario B: City Library Event & Book Lending System
+- Course–Instructor Relationship
+Cardinality: Many-to-Many (A course can be taught by multiple instructors, and an instructor can teach multiple courses.)
+Participation: Partial (A course may exist without an instructor assigned initially.)
 
-**Business Context:**  
-The Central Library wants to manage book lending and cultural events.
+- Extension (Prerequisite):
+  In the course entity, prerequisites are modeled as an attribute indicating which course(s) must be completed before enrolling in the course. This adds dependency between different course entities.
 
-**Requirements:**  
-- Members borrow books, with loan and return dates tracked.  
-- Each book has title, author, and category.  
-- Library organizes events; members can register.  
-- Each event has one or more speakers/authors.  
-- Rooms are booked for events and study.  
-- Overdue fines apply for late returns.
+## Design Choices:
+- Entities:
+Entities were chosen based on major participants in a university system (University, Student, Course, Instructor).
+- Relationships:
+Relationships were modeled to reflect real-world connections: students belong to a university, enroll in courses, and courses are conducted by instructors.
+- Attributes:
+Attributes cover important details needed for university operations — e.g., student contacts, course details, instructor background.
+- Assumptions:
+Each student belongs to only one university.
+Courses can have prerequisites, but it’s optional.
+Instructors can take multiple courses and have their own experiences noted separately.
+Some relationships are partial, meaning entities can exist without always needing the related entity immediately (e.g., a course can exist before any students enroll).
 
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
-
----
-
-# Scenario C: Restaurant Table Reservation & Ordering
-
-**Business Context:**  
-A popular restaurant wants to manage reservations, orders, and billing.
-
-**Requirements:**  
-- Customers can reserve tables or walk in.  
-- Each reservation includes date, time, and number of guests.  
-- Customers place food orders linked to reservations.  
-- Each order contains multiple dishes; dishes belong to categories (starter, main, dessert).  
-- Bills generated per reservation, including food and service charges.  
-- Waiters assigned to serve reservations.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
-
----
-
-## Instructions for Students
-
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
+## RESULT
+Thus the ER daigram have been successfully drawn and explained briefly.
