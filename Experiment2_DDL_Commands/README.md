@@ -1,4 +1,8 @@
 # Experiment 2: DDL Commands
+# NAME  : GOPIKRISHNAN M
+# REG NO: 212223043001
+
+
 
 ## AIM
 To study and implement DDL commands and different types of constraints.
@@ -34,16 +38,6 @@ ALTER TABLE relation_name DROP COLUMN field_name;
 ```sql
 ALTER TABLE relation_name RENAME COLUMN old_field_name TO new_field_name;
 ```
-### 3. DROP TABLE
-Used to permanently delete the structure and data of a table.
-```sql
-DROP TABLE relation_name;
-```
-### 4. RENAME
-Used to rename an existing database object.
-```sql
-RENAME TABLE old_relation_name TO new_relation_name;
-```
 ### CONSTRAINTS
 Constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted by the constraint. It can be specified when the table is created (using CREATE TABLE) or after it is created (using ALTER TABLE).
 ### 1. NOT NULL
@@ -71,158 +65,71 @@ CREATE TABLE Table_Name (
 );
 ```
 ### 4. PRIMARY KEY
-Used to uniquely identify each record in a table.
-Properties:
-Must contain unique values.
-Cannot be null.
-Should contain minimal fields.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size) PRIMARY KEY
-);
-```
-### 5. FOREIGN KEY
-Used to reference the primary key of another table.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size),
-  FOREIGN KEY (column_name) REFERENCES other_table(column)
-);
-```
-### 6. DEFAULT
-Used to insert a default value into a column if no value is specified.
-
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  col_name1 data_type,
-  col_name2 data_type,
-  col_name3 data_type DEFAULT 'default_value'
-);
-```
-
-**Question 1**
---
--- Paste Question 1 here
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(106,'Fitness Tracker','Wearables',NULL,NULL);
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(107,'Laptop','Electronics',999.99,50);
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(108,'Wireless Earbuds','Accessories',NULL,100);
 ```
 
 **Output:**
 
-![Output1](output.png)
-
-**Question 2**
----
--- Paste Question 2 here
-
-```sql
--- Paste your SQL code below for Question 2
-```
-
-**Output:**
-
-![Output2](output.png)
-
-**Question 3**
----
--- Paste Question 3 here
-
-```sql
--- Paste your SQL code below for Question 3
-```
-
-**Output:**
-
-![Output3](output.png)
-
-**Question 4**
----
--- Paste Question 4 here
-
-```sql
--- Paste your SQL code below for Question 4
-```
-
-**Output:**
-
-![Output4](output.png)
-
-**Question 5**
----
--- Paste Question 5 here
-
-```sql
--- Paste your SQL code below for Question 5
-```
-
-**Output:**
-
-![Output5](output.png)
-
-**Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
-```
-
-**Output:**
-
-![Output6](output.png)
-
-**Question 7**
----
--- Paste Question 7 here
-
-```sql
--- Paste your SQL code below for Question 7
-```
-
-**Output:**
-
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/591defed-3658-4976-a479-3704104d7909)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/db29c91b-9692-462e-ac58-ad7c8a035391)
 
 ```sql
--- Paste your SQL code below for Question 8
+ALTER TABLE Companies ADD COLUMN designation varchar(50);
+ALTER TABLE Companies ADD COLUMN net_salary number;
+ALTER TABLE Companies ADD COLUMN dob date;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/36f6e886-cdbc-40c1-937c-7d2559a0e7b3)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/04c55e88-d808-4cce-9f43-0a4b2daa2943)
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE jobs(
+job_id INT,
+job_title TEXT DEFAULT '',
+min_salary INT DEFAULT 8000,
+max_salary INT DEFAULT NULL);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/4d67b31f-2b95-4c12-add8-b3054eb0448f)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/baedcb9b-7706-43c1-afd3-a0ca26f7c903)
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE Student_details ADD COLUMN Email VARCHAR(50);
+ALTER TABLE Student_details ADD COLUMN MARKS INT DEFAULT 0;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/e2dcd365-c733-4639-9d0d-e9db05b3eda1)
 
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
+
+
+
+
+
+
+
+
